@@ -1,0 +1,265 @@
+$background_color: black;
+$collar_color: #F51B1B;
+
+$breakpoint_md: 720px;
+$breakpoint_sm: 360px;
+
+
+@font-face {
+  font-family: TT-Commons;
+  src: url("./assets/tt-commons-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Redcollar;
+  src: url("./assets/Redcollar.woff2") format("woff2");
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: TT-Commons, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  min-height: 100%;
+  column-gap: 40px;
+
+  @media screen and (max-width: $breakpoint_md) {
+    padding: 10px;
+  }
+}
+
+header {
+  width: 100%;
+  height: 0;
+
+  img {
+    float: right;
+  }
+}
+
+aside {
+  min-width: 320px;
+  max-width: 320px;
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  @media screen and (max-width: $breakpoint_md) {
+    min-width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+}
+
+.photo {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: -20px;
+}
+
+.contacts {
+  position: relative;
+  background-color: $collar_color;
+  color: white;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  padding: 24px;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    height: 40px;
+    width: 40px;
+    box-shadow: 0 20px 0 0 $collar_color;
+  }
+
+  &:before {
+    left: 50%;
+    border-radius: 0 0 0 30px / 0 0 0 20px;
+  }
+
+  &:after {
+    right: 50%;
+    border-radius: 0 0 30px 0 / 0 0 20px 0;
+  }
+
+  .name {
+    font-family: Redcollar, fantasy;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+  }
+
+  .about {
+    margin-bottom: 40px;
+  }
+}
+
+.glasses {
+  position: absolute;
+  top: 225px;
+  left: 370px;
+}
+
+.contact {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+
+  .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 11px;
+  }
+}
+
+.phone {
+  list-style: inside url("./assets/icons/phone.svg");
+
+  &::marker {
+    font-size: 1rem;
+    line-height: 0.1rem;
+  }
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  @media screen and (max-width: 360px) {
+    margin-left: 0;
+  }
+}
+
+.about {
+  max-width: 690px;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+  font-style: normal;
+
+  ol, ul {
+    padding-left: 1.25rem;
+  }
+
+  li{
+    list-style: disc;
+  }
+
+  > * {
+    margin-bottom: 1rem;
+  }
+}
+
+.info {
+  position: relative;
+  height: 100%;
+  padding: 47px 27px 27px;
+  border: 1px white solid;
+  border-top: none;
+  color: white;
+
+  .entry {
+    display: flex;
+    @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+    }
+
+    .category {
+      font-family: Redcollar;
+      min-width: 200px;
+      max-width: 200px;
+      margin-bottom: 1rem;
+    }
+
+    .history {
+      ul {
+        list-style-type: none;
+        margin: 0 0 0.5rem;
+        padding: 0;
+
+        ul {
+          list-style-type: none;
+          color: gray;
+          margin: 0 0 0.5rem;
+          padding: 0;
+        }
+      }
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+
+      *:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    height: 20px;
+  }
+
+  &:before {
+    left: 0;
+    width: calc(87px);
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 0 30px 0 0 / 0 20px 0 0;
+  }
+
+  &:after {
+    right: 0;
+    width: calc(100% - 86px);
+    border-radius: 30px 0 0 0 / 20px 0 0 0;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+  }
+}
+
+.divider {
+  border: 1px solid gray;
+  margin: 20px 20px 20px 0;
+}
