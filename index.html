@@ -8,50 +8,62 @@
 <body>
 <div class="container">
     <header>
-        <img src="assets/logo.svg">
+        <img src="assets/logo.svg" alt="logo">
     </header>
     <aside>
-        <img class="photo" src="./assets/photo.png" alt="photo">
+        <div style="position: relative">
+            <img class="glasses" src="./assets/collar.svg" alt="glasses">
+            <img class="photo" src="./assets/photo.png" alt="photo">
+        </div>
         <div class="contacts">
             <h1 class="name">Гуньков Родион</h1>
             <p class="about">23 года, Воронеж</p>
-            <div class="contact"><img class="icon" src="./assets/icons/phone.svg" alt="">+79913228834</div>
-            <div class="contact"><img class="icon" src="./assets/icons/mail.svg" alt="">vitsun2001@gmail.com</div>
-            <div class="contact"><img class="icon" src="./assets/icons/telegram.svg" alt="">t.me/@VitSun</div>
-            <div class="contact"><img class="icon" src="./assets/icons/github.svg" alt="">github.com/VitSun2001</div>
+            <div class="contact"><img class="icon" src="./assets/icons/phone.svg" alt=""><a href="tel:+79913228834">+79913228834</a>
+            </div>
+            <div class="contact"><img class="icon" src="./assets/icons/mail.svg" alt=""><a
+                    href="mailto:vitsun2001@gmail.com">vitsun2001@gmail.com</a></div>
+            <div class="contact"><img class="icon" src="./assets/icons/telegram.svg" alt=""><a
+                    href="https://t.me/@VitSun">t.me/@VitSun</a></div>
+            <div class="contact"><img class="icon" src="./assets/icons/github.svg" alt=""><a
+                    href="https://github.com/VitSun2001">github.com/VitSun2001</a></div>
         </div>
     </aside>
     <main>
         <div class="about">
             <p>
                 Привет! Меня зовут Родион, и я fullstack разработчик с опытом работы чуть более года. Мне интересно
-                разрабатывать различные приложения, в т.ч. frontend и backend.
+                разрабатывать как клиентские, так и серверные приложения. Хочу углубленно изучить frontend разработку, лучшие практики авторизации и UX и
+                научиться работать с react.
             </p>
             <p>
                 Мои недавние Pet-проекты:
             <ul>
-                <li> Домашний сервер на Ubuntu, с мониторингом Grafana и бесперебойным питанием. На этой машине я
+                <li class="disk"> Домашний сервер на Ubuntu, с мониторингом Grafana и бесперебойным питанием. На этой
+                    машине я
                     содержу
                     приватный сервер сетевой игры Minecraft, а также разворачиваю Pet-проекты. Большинство ПО находится
                     в Docker контейнерах, в качестве web-сервера используется Caddy в режиме reverse proxy.
                     Аутентификация на сервисах для администрации происходит через инстанс Keycloak;
                 </li>
-                <li> API для ведения статистики об игроках сервера сетевой игры Minecraft на базе Kotlin с
+                <li class="disk"> API для ведения статистики об игроках сервера сетевой игры Minecraft на базе Kotlin с
                     использованием фреймворка Ktor, Exposed ORM и библиотеки для миграции БД flyway;
                 </li>
-                <li>Discord бот на базе .NET 8 с использованием Worker Service и библиотеки DSharpPlus, данный бот
+                <li class="disk">Discord бот на базе .NET 8 с использованием Worker Service и библиотеки DSharpPlus,
+                    данный бот
                     позволяет связывать голосовые и текстовые каналы, для создания приватных чатов у собеседников, а
                     также автоматически создавать и закрывать ветки в определенных текстовых каналах по заранее
                     созданным правилам;
                 </li>
-                <li>REST API Wiki движок на базе .NET 8 с использованием Minimal API, MediatR, Entity Framework, Fluent
+                <li class="disk">REST API Wiki движок на базе .NET 8 с использованием Minimal API, MediatR, Entity
+                    Framework, Fluent
                     Validation, в качестве СУБД используется PostgresSQL, также реализована интеграция с identiy
                     провайдером Keycloak. Ключевыми особенностями данного движка являются: ведение истории изменений
                     статей от различных пользователей, модерация ревизий статей, авторизация по ролям. Само приложение
                     развёрнуто на домашнем сервере в Docker контейнере, таким же образом подняты необходимая БД и
                     Keycloak;
                 </li>
-                <li>SPA приложение на базе Vue 3 с применение TypeScript, библиотеки компонентов PrimeVue, библиотеки
+                <li class="disk">SPA приложение на базе Vue 3 с применение TypeScript, библиотеки компонентов PrimeVue,
+                    библиотеки
                     управления состоянием Pinia, данное приложение является Frontend клиентом для представленного выше
                     API, с полным покрытием эндпоинтов;
                 </li>
@@ -93,12 +105,16 @@
             <div class="entry">
                 <div class="category">Навыки</div>
                 <div class="skills">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>SASS</span>
                     <span>JavaScript</span>
                     <span>TypeScript</span>
                     <span>Vue</span>
+                    <span>C#</span>
                     <span>.NET</span>
                     <span>Kotlin</span>
-                    <span></span>
+                    <span>Docker</span>
                 </div>
             </div>
         </div>
